@@ -1,8 +1,8 @@
 """
-Contains the core of type-tools: hintwith(), hintwithmethod(), etc.
+Contains the core of hints: hintwith(), hintwithmethod(), etc.
 
 NOTE: this module is private. All functions and objects are available in the main
-`type_tools` namespace - use that instead.
+`hints` namespace - use that instead.
 
 """
 from typing import Callable, TypeVar

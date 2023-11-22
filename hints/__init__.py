@@ -1,5 +1,5 @@
 '''
-# type-tools
+# hints
 Provides more typing tools for python.
 
 ## Usage
@@ -7,7 +7,7 @@ Provides more typing tools for python.
 Use `hintwith()` to annotate your function with the other one's annotations:
 
 ```py
->>> from type_tools import hintwith
+>>> from hints import hintwith
 >>> def a(x: int, y: int, z: int = 0) -> int:
 ...     """Sums x, y and z."""
 ...     return x + y + z
@@ -22,10 +22,10 @@ Also, there is `hintwithmethod()` to annotate your function with a method rather
 
 ## See Also
 ### Github repository
-* https://github.com/Chitaoji/type-tools/
+* https://github.com/Chitaoji/hints/
 
 ### PyPI project
-* https://pypi.org/project/type-tools/
+* https://pypi.org/project/hints/
 
 ## License
 This project falls under the BSD 3-Clause License.

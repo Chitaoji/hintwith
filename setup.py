@@ -13,7 +13,7 @@ from shutil import rmtree
 from setuptools import Command, find_packages, setup
 
 # Package meta-data.
-NAME = "type-tools"
+NAME = "hints"
 DESCRIPTION = "Provides more typing tools for python."
 URL = "https://github.com/Chitaoji/dataplot"
 EMAIL = "2360742040@qq.com"
