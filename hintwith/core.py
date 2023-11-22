@@ -47,7 +47,7 @@ def hintwithmethod(
 ) -> Callable[[Callable[..., U]], Callable[P, U]]:
     """
     Behaves like `hintwith()` except that it is designed to annotate your function
-    with a method rather than a function.
+    with a method rather than another function.
 
     Parameters
     ----------
