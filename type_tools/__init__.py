@@ -1,11 +1,6 @@
+'''
 # type-tools
 Provides more typing tools for python.
-
-## Installation
-
-```sh
-$ pip install type-tools
-```
 
 ## Usage
 
@@ -35,5 +30,9 @@ Also, there is `hintwithmethod()` to annotate your function with a method rather
 ## License
 This project falls under the BSD 3-Clause License.
 
-### v0.0.0
-* Initial release.
+'''
+
+from .__version__ import __version__
+from .core import *
+
+__all__ = ["hintwith", "hintwithmethod"]
