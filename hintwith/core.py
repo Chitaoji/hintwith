@@ -1,8 +1,8 @@
 """
-Contains the core of hints: hintwith(), hintwithmethod(), etc.
+Contains the core of hintwith: hintwith(), hintwithmethod(), etc.
 
 NOTE: this module is private. All functions and objects are available in the main
-`hints` namespace - use that instead.
+`hintwith` namespace - use that instead.
 
 """
 from typing import Callable, TypeVar
@@ -20,9 +20,9 @@ __all__ = ["hintwith", "hintwithmethod"]
 def hintwith(__func: Callable[P, T]) -> Callable[[Callable[..., U]], Callable[P, U]]:
     """
     This decorator does literally NOTHING to your function, but can annotate it
-    with the other one's annotations. This means that nothing inside the function
-    (including attributes like `__doc__` and `__annotations__`) are modified, but
-    the annotations may SEEM to be changed in your IDE's type hints.
+    with an existing one's annotations. This means that nothing inside the
+    function (including attributes like `__doc__` and `__annotations__`) are
+    modified, but the annotations may SEEM to be changed in your IDE's type hints.
 
     Parameters
     ----------

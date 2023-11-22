@@ -1,13 +1,13 @@
 '''
-# hints
-Provides more typing tools for python.
+# hintwith
+Hints your function with an existing one.
 
 ## Usage
 
 Use `hintwith()` to annotate your function with the other one's annotations:
 
 ```py
->>> from hints import hintwith
+>>> from hintwith import hintwith
 >>> def a(x: int, y: int, z: int = 0) -> int:
 ...     """Sums x, y and z."""
 ...     return x + y + z
@@ -22,10 +22,10 @@ Also, there is `hintwithmethod()` to annotate your function with a method rather
 
 ## See Also
 ### Github repository
-* https://github.com/Chitaoji/hints/
+* https://github.com/Chitaoji/hintwith/
 
 ### PyPI project
-* https://pypi.org/project/hints/
+* https://pypi.org/project/hintwith/
 
 ## License
 This project falls under the BSD 3-Clause License.

@@ -13,8 +13,8 @@ from shutil import rmtree
 from setuptools import Command, find_packages, setup
 
 # Package meta-data.
-NAME = "hints"
-DESCRIPTION = "Provides more typing tools for python."
+NAME = "hintwith"
+DESCRIPTION = "Hints your function with an existing one."
 URL = "https://github.com/Chitaoji/dataplot"
 EMAIL = "2360742040@qq.com"
 AUTHOR = "Chitaoji"
