@@ -1,10 +1,15 @@
-"""Setup the package."""
+"""
+Setup the package.
+
+To use this file, you must:
+
+```sh
+$ pip install twine
+$ pip install wheel
+```
+"""
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-# Note: To use the 'upload' functionality of this file, you must:
-#   $ pipenv install twine --dev
-
 import io
 import os
 import sys
