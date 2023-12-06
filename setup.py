@@ -17,7 +17,6 @@ from pathlib import Path
 from shutil import rmtree
 from typing import Any, Dict, Final, List, Optional, Union
 
-
 import yaml
 from setuptools import Command, find_packages, setup
 
@@ -36,27 +35,22 @@ REQUIRED: Final[List[str]] = yml["REQUIRED"]
 EXTRAS: Final[Dict] = yml["EXTRAS"]
 
 
-
 # Import the README and use it as the long-description.
 try:
     long_description = "\n" + (here / "README.md").read_text()
-
 except FileNotFoundError:
     long_description = DESCRIPTION
-
 
 
 # Load the package's __version__.py module as a dictionary.
 about = {}
 python_exec = exec
 if not VERSION:
-
     try:
         project_slug = NAME.lower().replace("-", "_").replace(" ", "_")
         python_exec((here / project_slug / "__version__.py").read_text(), about)
     except FileNotFoundError:
         about["__version__"] = "0.0.0"
-
 else:
     about["__version__"] = VERSION
 
@@ -73,13 +67,13 @@ class UploadCommand(Command):
         print(f"\033[1m{s}\033[0m")
 
     def initialize_options(self):
-        """Initializes options."""
+        """Initialize options."""
 
     def finalize_options(self):
-        """Finalizes options."""
+        """Finalize options."""
 
     def run(self):
-        """Runs commands."""
+        """Run commands."""
         try:
             self.status("Removing previous builds…")
             rmtree(os.path.join(here, "dist"))
@@ -215,7 +209,6 @@ class ReadmeFormatError(Exception):
     """Raised when the README has a wrong format."""
 
 
-
 if __name__ == "__main__":
     # Import the __init__.py and change the module docstring.
     try:
@@ -268,4 +261,3 @@ if __name__ == "__main__":
             "upload": UploadCommand,
         },
     )
-
