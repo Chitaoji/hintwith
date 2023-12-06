@@ -1,7 +1,7 @@
 """
 Setup the package.
 
-To use the full functionality of this file this file, you must:
+To use the full functionality of this file, you must:
 
 ```sh
 $ pip install yaml
