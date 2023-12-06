@@ -35,5 +35,5 @@ Also, there is `hintwithmethod()` to annotate the function with a method rather 
 ## License
 This project falls under the BSD 3-Clause License.
 
-### v0.0.1
+### v0.1.0
 * Initial release.

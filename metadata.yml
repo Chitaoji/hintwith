@@ -1,0 +1,18 @@
+# Package meta-data.
+NAME: hintwith
+DESCRIPTION: Hints your function with an existing one.
+URL: https://github.com/Chitaoji/hintwith/
+EMAIL: 2360742040@qq.com
+AUTHOR: Chitaoji
+REQUIRES_PYTHON: ">=3.8.13"
+VERSION:
+REQUIRED:
+    - attrs
+    - "hintwith>=0.0.1"
+    - "lazyr>=0.0.10"
+    - matplotlib
+    - numpy
+    - pandas
+    - scipy
+
+EXTRAS: {}
