@@ -4,22 +4,21 @@ Hints your function with an existing one.
 
 ## Usage
 
-Use `hintwith()` to annotate a function with another one's annotations:
+Use `hintwith()` to hint a function with another one:
 
 ```py
 >>> from hintwith import hintwith
 >>> def a(x: int, y: int, z: int = 0) -> int:
 ...     """Sums x, y and z."""
 ...     return x + y + z
-... 
+...
 >>> @hintwith(a)
 ... def b(*args, **kwargs) -> float:
 ...     return float(a(*args, **kwargs))
-... 
+...
 ```
 
-Also, there is `hintwithmethod()` to annotate the function with a method rather than 
-another function.
+Also, there is `hintwithmethod()` to hint the function with a method rather than a direct callable.
 
 ## See Also
 ### Github repository
