@@ -76,8 +76,8 @@ def hintwithmethod(
 
 def hintwithmethod(__method: Callable, __is_method: bool = False) -> Callable:
     """
-    Behaves like `hintwith()` except that it uses the annotations of a method
-    rather than a direct callable to hint the decorated function with.
+    Behaves like `hintwith()` except that it hints the decorated function with a
+    method rather than a direct callable.
 
     Parameters
     ----------
