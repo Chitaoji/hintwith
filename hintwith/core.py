@@ -33,25 +33,29 @@ def hintwith(
 
 def hintwith(__func: Callable, __is_method: bool = False) -> Callable:
     """
-    This decorator does literally NOTHING to your function, but can annotate it
-    with an existing one's annotations. This means that nothing inside the
-    function (including attributes like `__doc__` and `__annotations__`) are
-    modified, but the annotations may SEEM to be changed in your IDE's type hints.
+    This decorator does literally NOTHING to the decorated function except change
+    its type hints with the annotations of an existing function. This means that
+    nothing inside the decorated function (including attributes like `__doc__` and
+    `__annotations__`) are modified, but the type hints may SEEM to be changed in
+    language tools like Pylance.
 
     Parameters
     ----------
-    __func : Callable[P, T]
-        The function whose annotations you want to annotate with.
+    __func : Callable
+        An existing function.
+
+    __is_method : bool, optional
+        Determines whether the decorated function is a method, by default False.
 
     Returns
     -------
-    Callable[[Callable[..., U]], Callable[P, U]]
+    Callable
         A decorator which does nothing to the function.
 
     """
 
     def decorator(a: Any) -> Any:
-        return a  # See? We do nothing to your function
+        return a  # See? We do nothing to the function
 
     return decorator
 
@@ -72,22 +76,25 @@ def hintwithmethod(
 
 def hintwithmethod(__method: Callable, __is_method: bool = False) -> Callable:
     """
-    Behaves like `hintwith()` except that it is designed to annotate your function
-    with a method rather than another function.
+    Behaves like `hintwith()` except that it uses the annotations of a method
+    rather than a direct callable to hint the decorated function with.
 
     Parameters
     ----------
-    __method : Callable[Concatenate[S, P], T]
-        The method whose annotations you want to copy.
+    __method : Callable
+        An existing method.
+
+    __is_method : bool, optional
+        Determines whether the decorated function is a method, by default False.
 
     Returns
     -------
-    Callable[[Callable[..., U]], Callable[P, U]]
+    Callable
         A decorator which does nothing to the function.
 
     """
 
     def decorator(a: Any) -> Any:
-        return a  # See? We do nothing to your function
+        return a  # See? We do nothing to the function
 
     return decorator
