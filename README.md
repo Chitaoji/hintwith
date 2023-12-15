@@ -9,7 +9,7 @@ $ pip install hintwith
 
 ## Usage
 
-Use `hintwith()` to annotate a function with another one's annotations:
+Use `hintwith()` to hint a function with another one's annotations:
 
 ```py
 >>> from hintwith import hintwith
@@ -23,7 +23,7 @@ Use `hintwith()` to annotate a function with another one's annotations:
 ... 
 ```
 
-Also, there is `hintwithmethod()` to annotate the function with a method rather than another function.
+Also, there is `hintwithmethod()` to hint the function with the annotations of a method rather than another function.
 
 ## See Also
 ### Github repository
