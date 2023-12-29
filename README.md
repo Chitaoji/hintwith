@@ -1,5 +1,5 @@
 # hintwith
-Hints your function with an existing one.
+Hints your function with an existing callable.
 
 ## Installation
 
@@ -9,7 +9,7 @@ $ pip install hintwith
 
 ## Usage
 
-Use `hintwith()` to hint a function with another one:
+Use `hintwith()` to hint a function with another function:
 
 ```py
 >>> from hintwith import hintwith
