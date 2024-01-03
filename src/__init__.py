@@ -34,5 +34,4 @@ This project falls under the BSD 3-Clause License.
 
 from .__version__ import __version__
 from .core import *
-
-__all__ = ["hintwith", "hintwithmethod"]
+from .core import __all__
