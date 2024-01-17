@@ -36,6 +36,9 @@ Also, there is `hintwithmethod()` to hint the function with a method rather than
 This project falls under the BSD 3-Clause License.
 
 ## History
+### v0.1.2
+* Updated comments.
+
 ### v0.1.1
 * New optional parameter for `hintwith()` and `hintwithmethod()`:
   * `__is_method` : determines whether the function to get hinted is a method.
