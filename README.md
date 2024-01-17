@@ -1,5 +1,5 @@
 # hintwith
-Hints your function with an existing callable.
+Hints your function with an existing one.
 
 ## Installation
 
@@ -38,7 +38,7 @@ This project falls under the BSD 3-Clause License.
 ## History
 ### v0.1.1
 * New optional parameter for `hintwith()` and `hintwithmethod()`:
-  * `__is_method` : determines whether the decorated function is a method.
+  * `__is_method` : determines whether the function to get hinted is a method.
 
 ### v0.1.0
 * Initial release.
