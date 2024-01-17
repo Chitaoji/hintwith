@@ -19,38 +19,39 @@ __all__ = ["hintwith", "hintwithmethod"]
 
 @overload
 def hintwith(
-    __func: Callable[P, Any], __is_method: Literal[False] = False
+    __exist: Callable[P, Any], __is_method: Literal[False] = False
 ) -> Callable[[Callable[..., T]], Callable[P, T]]:
     ...
 
 
 @overload
 def hintwith(
-    __func: Callable[P, Any], __is_method: Literal[True] = True
+    __exist: Callable[P, Any], __is_method: Literal[True] = True
 ) -> Callable[[Callable[Concatenate[S, Q], T]], Callable[Concatenate[S, P], T]]:
     ...
 
 
-def hintwith(__func: Callable, __is_method: bool = False) -> Callable:
+def hintwith(__exist: Callable, __is_method: bool = False) -> Callable:
     """
-    This decorator does literally NOTHING to the decorated function except change
-    its type hints with the annotations of an existing function. This means that
-    nothing inside the decorated function (including attributes like `__doc__` and
-    `__annotations__`) are modified, but the type hints may SEEM to be changed in
-    language tools like Pylance.
+    This decorator does literally NOTHING to the decorated function except changing
+    its type hints with the annotations of another existing function. This means
+    that nothing inside the decorated function (including attributes like `__doc__`
+    and `__annotations__`) are modified, but the type hints may SEEM to be changed
+    in language tools like Pylance.
 
     Parameters
     ----------
-    __func : Callable
-        An existing function.
+    __exist : Callable
+        An existing function object.
 
     __is_method : bool, optional
-        Determines whether the decorated function is a method, by default False.
+        Determines whether the function to get hinted is a method (that the first
+        argument should be Self compulsively), by default False.
 
     Returns
     -------
     Callable
-        A decorator which does nothing to the function.
+        A decorator which returns the input itself.
 
     """
 
@@ -62,35 +63,36 @@ def hintwith(__func: Callable, __is_method: bool = False) -> Callable:
 
 @overload
 def hintwithmethod(
-    __method: Callable[Concatenate[Any, P], Any], __is_method: Literal[False] = False
+    __exist: Callable[Concatenate[Any, P], Any], __is_method: Literal[False] = False
 ) -> Callable[[Callable[..., T]], Callable[P, T]]:
     ...
 
 
 @overload
 def hintwithmethod(
-    __method: Callable[Concatenate[Any, P], Any], __is_method: Literal[True] = True
+    __exist: Callable[Concatenate[Any, P], Any], __is_method: Literal[True] = True
 ) -> Callable[[Callable[Concatenate[S, Q], T]], Callable[Concatenate[S, P], T]]:
     ...
 
 
-def hintwithmethod(__method: Callable, __is_method: bool = False) -> Callable:
+def hintwithmethod(__exist: Callable, __is_method: bool = False) -> Callable:
     """
-    Behaves like `hintwith()` except that it hints the decorated function with a
-    method rather than a direct callable.
+    Behaves like `hintwith()` except that the existing function whose annotations
+    are used is a method rather than a direct callable.
 
     Parameters
     ----------
-    __method : Callable
-        An existing method.
+    __exist : Callable
+        An existing method object.
 
     __is_method : bool, optional
-        Determines whether the decorated function is a method, by default False.
+        Determines whether the function to get hinted is also a method (that the
+        first argument should be Self compulsively), by default False.
 
     Returns
     -------
     Callable
-        A decorator which does nothing to the function.
+        A decorator which returns the input itself.
 
     """
 
