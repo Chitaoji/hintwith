@@ -4,7 +4,7 @@ Hints your function with an existing one.
 
 ## Usage
 
-Use `hintwith()` to hint a function with another one:
+Use `hintwith()` to hint a function with another function:
 
 ```py
 >>> from hintwith import hintwith
@@ -18,7 +18,8 @@ Use `hintwith()` to hint a function with another one:
 ...
 ```
 
-Also, there is `hintwithmethod()` to hint the function with a method rather than a direct callable.
+Also, there is `hintwithmethod()` to hint the function with a method rather than a
+direct callable.
 
 ## See Also
 ### Github repository
