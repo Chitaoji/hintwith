@@ -36,8 +36,11 @@ Also, there is `hintwithmethod()` to hint the function with a method rather than
 This project falls under the BSD 3-Clause License.
 
 ## History
+### v0.1.4
+* Renamed the positional argument `__is_method=` to `__hint_returntype=` for the avoidance of ambiguity.
+
 ### v0.1.3
-* Removed the positional argument `__is_method=` from `hintwith()` and `hintwithmethod()`; they've got a new positional argument `__hint_returns=` instead.
+* Removed the positional argument `__is_method=` from `hintwith()` and `hintwithmethod()`; added a new positional argument `__hint_returns=` to them.
 
 ### v0.1.2
 * Updated comments.
